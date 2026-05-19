@@ -1,0 +1,118 @@
+/* ================================
+   BASE (não altera seu tema claro)
+================================ */
+:root {
+  --brand: #0d6efd;
+  --bg-light: #f4f6fb;
+  --text-light: #212529;
+  --muted: #6c757d;
+}
+
+/* Corpo claro */
+body.light-mode {
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color .4s ease, color .4s ease;
+}
+
+/* ================================
+   DARK MODE (OPÇÃO A) — FINAL
+================================ */
+body.dark-mode {
+  background-color: #0f0f0f !important;
+  color: #ffffff !important;
+  transition: background-color .4s ease, color .4s ease;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background: #0f0f0f !important;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+/* Cards / Containers */
+body.dark-mode .card,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .box,
+body.dark-mode .table-container,
+body.dark-mode .modal-content,
+body.dark-mode .table td,
+body.dark-mode .table th {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+/* Tabelas */
+body.dark-mode .table thead {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode table {
+  color: #ffffff !important;
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+  background-color: #2a2a2a !important;
+}
+
+/* Inputs */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .form-control {
+  background-color: #2b2b2b !important;
+  color: #ffffff !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus,
+body.dark-mode .form-control:focus {
+  background-color: #333 !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.25) !important;
+  color: #ffffff !important;
+}
+
+/* Botões */
+body.dark-mode .btn {
+  color: white !important;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #3a3a3a !important;
+  border-color: #3a3a3a !important;
+}
+
+/* Textos mutados e links */
+body.dark-mode .text-muted,
+body.dark-mode a {
+  color: #cfcfcf !important;
+}
+
+/* Modal */
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: #2a2a2a !important;
+}
+
+body.dark-mode .modal-backdrop.show {
+  opacity: .8;
+  background-color: #000 !important;
+}
+
+/* Botão flutuante do modo escuro */
+#theme-toggle-float {
+  background-color: #0d6efd !important;
+  border: none;
+  color: white;
+}

@@ -1,0 +1,37 @@
+CREATE DATABASE IF NOT EXISTS db_estudos CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE db_estudos;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  senha_hash VARCHAR(255) NOT NULL,
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS disciplinas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT NOT NULL,
+  nome VARCHAR(100) NOT NULL,
+  cor VARCHAR(7) DEFAULT '#ffffff',
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+REATE TABLE IF NOT EXISTS tarefas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT NOT NULL,
+  disciplina_id INT DEFAULT NULL,
+  titulo VARCHAR(255) NOT NULL,
+  descricao TEXT,
+  data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+  data_inicio DATETIME DEFAULT NULL,
+  data_entrega DATETIME,
+  data_fim DATETIME DEFAULT NULL,
+  time_spent_seconds INT DEFAULT 0,
+  status ENUM('pending','running','paused','completed') DEFAULT 'pending',
+  concluido TINYINT(1) DEFAULT 0,
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+  FOREIGN KEY (disciplina_id) REFERENCES disciplinas(id) ON DELETE SET NULL
+);
