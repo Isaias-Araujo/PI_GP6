@@ -1,0 +1,12 @@
+body{
+background:#f5f5f5;
+font-family:Arial;
+}
+
+.container-box{
+max-width:400px;
+margin:80px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+}
