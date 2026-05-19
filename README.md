@@ -1,7 +1,7 @@
 # 📘 Projeto Integrador I – Prova de Conceito
 ## Aplicativo Web: Agenda de Estudos
 
-Desenvolvido por: **Grupo 21 - SENAC EAD 2025**
+Desenvolvido por: **Grupo 6 - SENAC EAD 2026**
 
 Equipe:
 - Felipe Alves da Silva
